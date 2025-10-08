@@ -14,21 +14,6 @@ from typing import Any
 import httpx
 from pydantic import BaseModel, ValidationError
 
-"""
-RentCast API Client.
-
-This module provides the main client class for interacting with the RentCast API.
-"""
-
-from __future__ import annotations
-
-import asyncio
-import logging
-from typing import Any
-
-import httpx
-from pydantic import BaseModel, ValidationError
-
 from .api._exceptions import (
     RentCastAPIError,
     RentCastAuthenticationError,
@@ -36,8 +21,8 @@ from .api._exceptions import (
     RentCastRateLimitError,
     RentCastValidationError,
 )
-from .api.listings.rental import RentalListingsClient
-from .api.listings.rental_by_id import RentalListingByIdClient
+from .api.listings.rental_listings import RentalListingsClient
+from .api.listings.rental_listing_by_id import RentalListingByIdClient
 from .api.listings.sale import SaleListingsClient
 from .api.listings.sale_by_id import SaleListingByIdClient
 from .api.market_data.statistics import MarketDataClient
